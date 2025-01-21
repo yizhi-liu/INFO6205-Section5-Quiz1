@@ -1,0 +1,6 @@
+/.idea/
+
+java/src/main/resources/
+java/target/
+
+/py/__pycache__/
