@@ -24,6 +24,10 @@ class InsertionSortTest(unittest.TestCase):
         sorter = InsertionSort([42])
         self.assertEqual(sorter.sort(), [42])
 
+    def test_sort_multiple_elements(self):
+        sorter = InsertionSort([5, 3, 8, 4, 2])
+        self.assertEqual(sorter.sort(), [2, 3, 4, 5, 8])
+
     def test_sort_duplicate_elements(self):
         sorter = InsertionSort([3, 3, 3, 1, 1, 2, 2])
         self.assertEqual(sorter.sort(), [1, 1, 2, 2, 3, 3, 3])
@@ -36,6 +40,10 @@ class InsertionSortTest(unittest.TestCase):
         sorter = InsertionSort([3.14, 2.71, 1.41, 0.58])
         self.assertEqual(sorter.sort(), [0.58, 1.41, 2.71, 3.14])
 
+    def test_sort_identical_elements(self):
+        sorter = InsertionSort([7, 7, 7, 7, 7])
+        self.assertEqual(sorter.sort(), [7, 7, 7, 7, 7])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -86,4 +86,13 @@ public class InsertionSortTest {
         sorter.sort(array);
         assertArrayEquals(expected, array);
     }
+
+    @Test
+    public void sort_sortsArrayWithFloatingPointNumbers() {
+        InsertionSort sorter = new InsertionSort();
+        Double[] array = {-10.0, 2.7, -10.2, 4.9, 0.5};
+        Double[] expected = {-10.2, -10.0, 0.5, 2.7, 4.9};
+        sorter.sort(array);
+        assertArrayEquals(expected, array);
+    }
 }
